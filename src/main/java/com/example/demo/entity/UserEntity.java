@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.Status;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -12,6 +13,8 @@ public class UserEntity {
     private Long id;
 
     private String name;
+
+    private Status status;
 
     @OneToMany
     @JoinColumn(name = "user_id")
@@ -40,4 +43,7 @@ public class UserEntity {
     public void setBankAccounts(List<BankAccount> bankAccounts) {
         this.bankAccounts = bankAccounts;
     }
+
+    public Status getStatus() {return status;}
+    public void setStatus(Status status) {this.status = status;}
 }

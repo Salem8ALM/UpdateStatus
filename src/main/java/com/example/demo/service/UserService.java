@@ -9,4 +9,5 @@ import java.util.List;
 public interface UserService {
     List<UserEntity> getAllUsers();
     UserResponse createUser(CreateUserRequest request);
+    UserResponse updateStatus(Long id, String status);
 }

@@ -6,9 +6,12 @@ public class UserResponse {
 
     private String name;
 
-    public UserResponse(Long id, String name) {
+    private String status;
+
+    public UserResponse(Long id, String name, String status) {
         this.id = id;
         this.name = name;
+        this.status = status;
     }
 
     public Long getId() {
@@ -26,4 +29,7 @@ public class UserResponse {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getStatus() {return status;}
+    public void setStatus(String status) {this.status = status;}
 }
